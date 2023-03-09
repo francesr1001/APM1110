@@ -10,18 +10,19 @@ var_x <- var(random_var)
 sd_val <- sd(random_var)
 
 
-cat("Mean:", mean_val, "\n")
-cat("Variance:", var_x, "\n")
-cat("Standard deviation:", sd_val)
+
+print(paste("Mean:", (mean_val), "\n")) 
+print(paste("Variance:",var_x, "\n")) 
+print(paste("Standard deviation:",sd_val)) 
 
 par(mfrow = c(1,2),bg = "#ccccff")
 
 #plotting our histogram
-hist(random_var, main = "1000 Random Variables from Geometric Distribution",
+hist(random_var, main = "1000 Random Variables ",
      xlab = "Random Variable", ylab = "Relative Frequency", col = "#cc99ff")
 
 
 
-plot(table(random_var)/length(random_var),
+plot(table(random_var)/length(random_var),main = "from Geometric Distribution",
      xlab = "Random Variable",
      ylab = "Probability", type = "h", col = "#cc99ff")
