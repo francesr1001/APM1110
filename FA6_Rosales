@@ -3,16 +3,14 @@ p <- 0.2
 random_var <- rgeom(1000, prob = p)+1
 random_var
 
-
-
-mean_val <- mean(random_var)
-var_x <- var(random_var)
-sd_val <- sd(random_var)
+mean_val <- round (mean(random_var),2)
+var_x <- round (var(random_var),2)
+sd_val <- round (sd(random_var),2)
 
 
 
-print(paste("Mean:", (mean_val), "\n")) 
-print(paste("Variance:",var_x, "\n")) 
+print(paste("Mean:", (mean_val))) 
+print(paste("Variance:",var_x)) 
 print(paste("Standard deviation:",sd_val)) 
 
 par(mfrow = c(1,2),bg = "#ccccff")
@@ -26,3 +24,6 @@ hist(random_var, main = "1000 Random Variables ",
 plot(table(random_var)/length(random_var),main = "from Geometric Distribution",
      xlab = "Random Variable",
      ylab = "Probability", type = "h", col = "#cc99ff")
+
+
+
